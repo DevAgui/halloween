@@ -10,16 +10,23 @@
     <script src="./javascript/halloween.js"></script>
 </head>
 <body>
+    <audio id="phantom_sound">
+        <source src="./sounds/GHOSTLY.mp3"></source>
+        este navegador no puede reproducir audio nativo
+       </audio>
     <!-- ATENCIÓN: ESTE EJERCICIO NO ES RESPONSIVE. -->
     <div id="container">
             <h1 id="title">Be welcome to our scary party</h1>
             <!-- afecto aparición fantasma y sonido fantasmagórico. -->
             <p id="mansion">Do you really want to enter in the horror house?</p>
-            <div id="mansion_door" onclick="mostrar('phantom')"></div><!-- 1º Creo un div vacío, 2º Incluir evento que dispara la interactividad, 3º Coloco una imagen, 4º Disparo el JavaScript. -->
+            <div id="mansion_door" onmouseover="mostrar('phantom');sonar('phantom_sound')"
+                                   onmouseout="ocultar('phantom');parar('phantom_sound')"></div><!-- 1º Creo un div vacío, 2º Incluir evento que dispara la interactividad, 3º Coloco una imagen, 4º Disparo el JavaScript. -->
             <p id="pumpkinp">You should avoid this pumpkin. She isn't alone... </p>
-            <div id="pumpkin" onclick="mostrar('scary_pumpkin')"></div>
+            <div id="pumpkin" onmouseover="mostrar('scary_pumpkin')"
+                              onmouseout="ocultar('scary_pumpkin')"></div>
             <p id="witchp">It is believed that if you get close enough to those monsters, you can see an horrible witch in front of you...</p>
-            <div id="witch" onclick="mostrar('horrible_witch')"></div>
+            <div id="witch" onmouseover="mostrar('horrible_witch')"
+                            onmouseout="ocultar('horrible_witch')"></div>
         </div>
         <img id="phantom" src="./images/ghost.png">
         <img id="scary_pumpkin" src="./images/pumpkin.png">
