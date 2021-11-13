@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Halloween Party</title>
+    <link rel="stylesheet" href="./styles/halloween.css">
+    <link rel="shortcut icon" href="./images/favicon-halloween.ico">
+    <!-- enlazo un JavaScript -->
+    <script src="./javascript/halloween.js"></script>
+</head>
+<body>
+    <audio id="phantom_sound">
+        <source src="./sounds/GHOSTLY.mp3"></source>
+        este navegador no puede reproducir audio nativo
+       </audio>
+    <audio id="witch_sound">
+        <source src="./sounds/witch.mp3"></source>
+        este navegador no puede reproducir audio nativo
+    </audio>
+    <audio id="pumpkin_sound">
+        <source src="./sounds/deeplaugh.mp3"></source>
+        este navegador no puede reproducir audio nativo
+    </audio>
+    <!-- ATENCIÓN: ESTE EJERCICIO NO ES RESPONSIVE. -->
+    <div id="container">
+            <h1 id="title">Be welcome to our scary party</h1>
+            <!-- afecto aparición fantasma y sonido fantasmagórico. -->
+            <p id="mansion">Do you really want to enter in the horror house?</p>
+            <div id="mansion_door" onmouseover="mostrar('phantom');sonar('phantom_sound')"
+                                   onmouseout="ocultar('phantom');parar('phantom_sound')"></div><!-- 1º Creo un div vacío, 2º Incluir evento que dispara la interactividad, 3º Coloco una imagen, 4º Disparo el JavaScript. -->
+            <p id="pumpkinp">You should avoid this pumpkin. She isn't alone... </p>
+            <div id="pumpkin" onmouseover="mostrar('scary_pumpkin');sonar('pumpkin_sound')"
+                              onmouseout="ocultar('scary_pumpkin');parar('pumpkin_sound')"></div>
+            <p id="witchp">PLEASE, JUST AVOID THEM...</p>
+            <div id="witch" onmouseover="mostrar('horrible_witch');sonar('witch_sound')"
+                            onmouseout="ocultar('horrible_witch');parar('witch_sound')"></div>
+        </div>
+        <img id="phantom" src="./images/ghost.png">
+        <img id="scary_pumpkin" src="./images/scary-pumpkin-gif.gif">
+        <img id="horrible_witch" src="./images/scary-witch-gif.gif">
+    </div>
+</body>
+</html>
